@@ -7,10 +7,10 @@ const Data = {
 }
 
 export default {
-  oninit() {
+  oninit(vnode) {
     m.request({
       method: 'GET',
-      url: 'content/home.md',
+      url: `content/${vnode.attrs.key}.md`,
       deserialize: (mdTextRaw) => { return mdTextRaw }
     })
     .then((mdTextGet) => {
