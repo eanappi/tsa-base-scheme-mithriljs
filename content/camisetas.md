@@ -1,3 +1,7 @@
+---
+title: Página Camisetas
+description: Contenido de la descripción
+---
 # Archivo Camisetas
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex deleniti saepe, totam voluptatibus eos obcaecati similique non nam atque cupiditate, ullam nemo voluptatem impedit, neque consequatur, qui aspernatur nulla. Totam.
