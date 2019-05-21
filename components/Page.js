@@ -16,6 +16,9 @@ export default {
     .then((mdTextGet) => {
       Data.mdText = mdTextGet
     })
+    .catch((err) => {
+      m.route.set('/404')
+    })
   },
   view(vnode) {
     return m('main',
