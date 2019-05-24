@@ -1,5 +1,7 @@
 import Page from './components/Page.js'
+import AmazonGridProducts from './components/AmazonGridProducts.js'
 
 m.route(document.body, '/home', {
-  '/:key' : Page
+  '/amazon' : AmazonGridProducts,
+  '/:key' : Page,
 })
