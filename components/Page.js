@@ -1,5 +1,6 @@
 import Header from './Header.js'
 import Footer from './Footer.js'
+import AmazonListProducts from './AmazonListProducts.js'
 
 const MdConverter = new showdown.Converter(
   { metadata: true }
@@ -7,6 +8,7 @@ const MdConverter = new showdown.Converter(
 
 const Data = {
   mdText: '',
+  productListAmazon: [],
 }
 
 export default {
@@ -37,6 +39,9 @@ export default {
         document.head.appendChild(metadaDescription)
       }
 
+      // Amazon Product List
+      Data.productListAmazon = mdTextMetadata.productsList.split(',')
+
       // Markdown content
       Data.mdText = mdTextGet
     })
@@ -48,6 +53,9 @@ export default {
     return m('main',
       m(Header),
       m('.page', m.trust(Data.mdText)),
+      m(AmazonListProducts, {
+        productsList: Data.productListAmazon
+      }),
       m(Footer),
     )
   }
